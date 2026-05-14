@@ -1,0 +1,7 @@
+{
+  "name": "telemetria-mobile-temp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
