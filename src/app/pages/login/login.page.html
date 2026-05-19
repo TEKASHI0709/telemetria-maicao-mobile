@@ -1,0 +1,71 @@
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+    <div class="futuristic-grid"></div>
+
+    <div class="wave-bg wave1"></div>
+    <div class="wave-bg wave2"></div>
+    <div class="wave-bg wave3"></div>
+
+    <div class="particles">
+      <div class="particle p1"></div>
+      <div class="particle p2"></div>
+      <div class="particle p3"></div>
+      <div class="particle p4"></div>
+      <div class="particle p5"></div>
+      <div class="particle p6"></div>
+      <div class="particle p7"></div>
+      <div class="particle p8"></div>
+      <div class="particle p9"></div>
+      <div class="particle p10"></div>
+      <div class="particle p11"></div>
+      <div class="particle p12"></div>
+    </div>
+
+    <div class="login-card">
+      <div class="card-glow"></div>
+      
+      <div class="logo-wrapper">
+        <svg class="water-drop-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50,15 C50,15 20,52 20,70 C20,86.5 33.5,100 50,100 C66.5,100 80,86.5 80,70 C80,52 50,15 50,15 Z" fill="url(#drop-gradient)"/>
+          <defs>
+            <linearGradient id="drop-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#06b6d4" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <h1 class="app-title">Telemetría Maicao</h1>
+        <p class="app-subtitle">Sistema IoT · Control de Tanques</p>
+      </div>
+
+      <div class="tech-badges">
+        <span class="badge esp32">ESP32</span>
+        <span class="badge live">
+          <span class="signal-bars">
+            <span class="bar b1"></span>
+            <span class="bar b2"></span>
+            <span class="bar b3"></span>
+          </span>
+          Real-time
+        </span>
+      </div>
+
+      <form class="login-form" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label>Usuario</label>
+          <input type="text" name="username" [(ngModel)]="username" placeholder="Ingresa tu usuario" required [disabled]="isLoading">
+        </div>
+
+        <div class="input-group">
+          <label>Contraseña</label>
+          <input type="password" name="password" [(ngModel)]="password" placeholder="••••••••" required [disabled]="isLoading">
+        </div>
+
+        <button type="submit" class="btn-login" [disabled]="isLoading">
+          <span>{{ isLoading ? 'CONECTANDO...' : 'INGRESAR AL SISTEMA' }}</span>
+          <div class="btn-glow"></div>
+        </button>
+      </form>
+    </div>
+  </div>
+</ion-content>
